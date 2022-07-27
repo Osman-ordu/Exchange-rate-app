@@ -1,8 +1,9 @@
+const url = "https://api.apilayer.com/exchangerates_data/latest?base=TRY";
+
 const myHeaders = new Headers();
 myHeaders.append("apikey", "WjIXefZ2GRLg9PrlSeagJLyYBunNoTFp");
 
 
-const url = "https://api.apilayer.com/exchangerates_data/latest?base=TRY";
 
 const requestOptions = {
   method: 'GET',
@@ -10,23 +11,25 @@ const requestOptions = {
   headers: myHeaders
 };
 
+// -- Async function
+async function getData() {
+  try{
+   const response = await fetch(url, requestOptions);
+   const data = await response.json();
+  
+   const TRY = data.rates.TRY;
+   const USD = TRY / data.rates.USD;
+   const EUR = TRY / data.rates.EUR;
+   const GBP = TRY / data.rates.GBP;
 
-function getData() {
-   fetch(url, requestOptions)
-  .then(response => response.json())
-  .then(data => {
-    const TRY = data.rates.TRY;
-    const USD = TRY / data.rates.USD;
-    const EUR = TRY / data.rates.EUR;
-    const GBP = TRY / data.rates.GBP;
-
-    setData(USD,EUR,GBP)
-
-  })
-  .catch(err => console.warn(err));
+    setData(USD,EUR,GBP);
+  } catch(error) {
+    console.warn(error)
+  };
 
 }
 
+// -- Callback function
 function setData(USD,EUR,GBP){
 
     const dollar = document.getElementById('dollar');
