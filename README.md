@@ -1,2 +1,2 @@
 #  https://osman-ordu.github.io/Exchange-rate-app/ 
-![asasdf](https://user-images.githubusercontent.com/92692879/181287241-e27c3822-4bfd-4fc4-a331-a424263eb826.png)
+![async](https://user-images.githubusercontent.com/92692879/181404590-ac8cf799-52de-4903-a96a-e121d4b6059e.png)
