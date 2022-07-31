@@ -3,7 +3,7 @@ const url = "https://api.apilayer.com/exchangerates_data/latest?base=TRY";
 
 const myHeaders = new Headers();
 
-myHeaders.append("apikey", "WjIXefZ2GRLg9PrlSeagJLyYBunNoTFp");
+myHeaders.append("apikey", "3YfOwVHN2ygGQ1JP8dxaK4aQJHdXPKEZ");
 
 
 const requestOptions = {
